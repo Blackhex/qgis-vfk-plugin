@@ -21,16 +21,18 @@
  ***************************************************************************/
 """
 
-from PyQt4.QtCore import QSettings, QTranslator, qVersion, QCoreApplication, Qt, qDebug
-from PyQt4.QtGui import QAction, QIcon, QToolButton, QMenu
+from PyQt5.QtCore import QSettings, QTranslator, qVersion, QCoreApplication, Qt, qDebug
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QAction, QMenu, QToolButton
+
 # Initialize Qt resources from file resources.py
-import resources_rc
+from .resources import *
 # Import the code for the dialog
-from mainApp import MainApp
+from .mainApp import MainApp
 import os.path
 
 
-class vfkPlugin(object):
+class vfkPlugin:
 
     """QGIS Plugin Implementation."""
 

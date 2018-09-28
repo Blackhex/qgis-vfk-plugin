@@ -7,92 +7,83 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 try:
-    _fromUtf8 = QtCore.QString.fromUtf8
-except AttributeError:
-    def _fromUtf8(s):
-        return s
-
-try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
+    _encoding = QApplication.UnicodeUTF8
 
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+        return QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig)
+        return QApplication.translate(context, text, disambig)
 
 
 class Ui_VlastniciSearchForm(object):
 
     def setupUi(self, VlastniciSearchForm):
-        VlastniciSearchForm.setObjectName(_fromUtf8("VlastniciSearchForm"))
+        VlastniciSearchForm.setObjectName("VlastniciSearchForm")
         VlastniciSearchForm.resize(238, 208)
-        self.gridLayout = QtGui.QGridLayout(VlastniciSearchForm)
-        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
-        self.label = QtGui.QLabel(VlastniciSearchForm)
-        self.label.setObjectName(_fromUtf8("label"))
+        self.gridLayout = QGridLayout(VlastniciSearchForm)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QLabel(VlastniciSearchForm)
+        self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.jmenoLineEdit = QtGui.QLineEdit(VlastniciSearchForm)
-        self.jmenoLineEdit.setObjectName(_fromUtf8("jmenoLineEdit"))
+        self.jmenoLineEdit = QLineEdit(VlastniciSearchForm)
+        self.jmenoLineEdit.setObjectName("jmenoLineEdit")
         self.gridLayout.addWidget(self.jmenoLineEdit, 0, 1, 1, 1)
-        self.label_4 = QtGui.QLabel(VlastniciSearchForm)
-        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.label_4 = QLabel(VlastniciSearchForm)
+        self.label_4.setObjectName("label_4")
         self.gridLayout.addWidget(self.label_4, 1, 0, 1, 1)
-        self.ofoCheckBox = QtGui.QCheckBox(VlastniciSearchForm)
-        sizePolicy = QtGui.QSizePolicy(
-            QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Fixed)
+        self.ofoCheckBox = QCheckBox(VlastniciSearchForm)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(
             self.ofoCheckBox.sizePolicy().hasHeightForWidth())
         self.ofoCheckBox.setSizePolicy(sizePolicy)
         self.ofoCheckBox.setChecked(True)
-        self.ofoCheckBox.setObjectName(_fromUtf8("ofoCheckBox"))
+        self.ofoCheckBox.setObjectName("ofoCheckBox")
         self.gridLayout.addWidget(self.ofoCheckBox, 1, 1, 1, 1)
-        self.opoCheckBox = QtGui.QCheckBox(VlastniciSearchForm)
-        sizePolicy = QtGui.QSizePolicy(
-            QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Fixed)
+        self.opoCheckBox = QCheckBox(VlastniciSearchForm)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(
             self.opoCheckBox.sizePolicy().hasHeightForWidth())
         self.opoCheckBox.setSizePolicy(sizePolicy)
         self.opoCheckBox.setChecked(True)
-        self.opoCheckBox.setObjectName(_fromUtf8("opoCheckBox"))
+        self.opoCheckBox.setObjectName("opoCheckBox")
         self.gridLayout.addWidget(self.opoCheckBox, 2, 1, 1, 1)
-        self.sjmCheckBox = QtGui.QCheckBox(VlastniciSearchForm)
-        sizePolicy = QtGui.QSizePolicy(
-            QtGui.QSizePolicy.Preferred, QtGui.QSizePolicy.Fixed)
+        self.sjmCheckBox = QCheckBox(VlastniciSearchForm)
+        sizePolicy = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(
             self.sjmCheckBox.sizePolicy().hasHeightForWidth())
         self.sjmCheckBox.setSizePolicy(sizePolicy)
         self.sjmCheckBox.setChecked(True)
-        self.sjmCheckBox.setObjectName(_fromUtf8("sjmCheckBox"))
+        self.sjmCheckBox.setObjectName("sjmCheckBox")
         self.gridLayout.addWidget(self.sjmCheckBox, 3, 1, 1, 1)
-        self.label_2 = QtGui.QLabel(VlastniciSearchForm)
-        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.label_2 = QLabel(VlastniciSearchForm)
+        self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 4, 0, 1, 1)
-        self.rcIcoLineEdit = QtGui.QLineEdit(VlastniciSearchForm)
-        self.rcIcoLineEdit.setObjectName(_fromUtf8("rcIcoLineEdit"))
+        self.rcIcoLineEdit = QLineEdit(VlastniciSearchForm)
+        self.rcIcoLineEdit.setObjectName("rcIcoLineEdit")
         self.gridLayout.addWidget(self.rcIcoLineEdit, 4, 1, 1, 1)
-        spacerItem = QtGui.QSpacerItem(
-            20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        spacerItem = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.gridLayout.addItem(spacerItem, 6, 1, 1, 1)
-        self.label_3 = QtGui.QLabel(VlastniciSearchForm)
-        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.label_3 = QLabel(VlastniciSearchForm)
+        self.label_3.setObjectName("label_3")
         self.gridLayout.addWidget(self.label_3, 5, 0, 1, 1)
-        self.lvVlastniciLineEdit = QtGui.QLineEdit(VlastniciSearchForm)
-        self.lvVlastniciLineEdit.setObjectName(
-            _fromUtf8("lvVlastniciLineEdit"))
+        self.lvVlastniciLineEdit = QLineEdit(VlastniciSearchForm)
+        self.lvVlastniciLineEdit.setObjectName("lvVlastniciLineEdit")
         self.gridLayout.addWidget(self.lvVlastniciLineEdit, 5, 1, 1, 1)
 
         self.retranslateUi(VlastniciSearchForm)
-        QtCore.QMetaObject.connectSlotsByName(VlastniciSearchForm)
+        QMetaObject.connectSlotsByName(VlastniciSearchForm)
 
     def retranslateUi(self, VlastniciSearchForm):
         VlastniciSearchForm.setWindowTitle(

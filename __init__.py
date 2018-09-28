@@ -24,5 +24,5 @@
 
 
 def classFactory(iface):
-    from vfkPlugin import vfkPlugin
+    from .vfkPlugin import vfkPlugin
     return vfkPlugin(iface)

@@ -21,8 +21,8 @@
  ***************************************************************************/
 """
 
-from PyQt4.QtSql import QSqlQueryModel, QSqlRecord, QSqlField, QSqlDatabase
-from PyQt4.QtCore import QTime, QObject
+from PyQt5.QtSql import QSqlQueryModel, QSqlRecord, QSqlField, QSqlDatabase
+from PyQt5.QtCore import QTime, QObject
 
 from qgis.utils import iface
 from qgis.core import QgsMessageLog

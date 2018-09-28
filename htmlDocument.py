@@ -21,7 +21,7 @@
  ***************************************************************************/
 """
 
-from vfkDocument import VfkDocument
+from .vfkDocument import VfkDocument
 
 
 class HtmlDocument(VfkDocument):
@@ -168,7 +168,7 @@ class HtmlDocument(VfkDocument):
             self.tableHeader(content[0])
             i += 1
 
-        for j in xrange(i, len(content)):
+        for j in range(i, len(content)):
             self.tableRow(content[j])
 
         self.endTable()

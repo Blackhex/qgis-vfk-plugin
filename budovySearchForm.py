@@ -22,10 +22,11 @@
  ***************************************************************************/
 """
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import QAbstractItemModel
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QWidget
+from PyQt5.QtCore import QAbstractItemModel
 
-from ui_budovysearchform import *
+from .ui_budovysearchform import *
 
 
 class BudovySearchForm(QWidget):

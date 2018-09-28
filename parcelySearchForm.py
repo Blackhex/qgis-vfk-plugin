@@ -22,11 +22,11 @@
  ***************************************************************************/
 """
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import QAbstractItemModel, QRegExp, SIGNAL
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
-from ui_parcelysearchform import *
-
+from .ui_parcelysearchform import *
 
 class ParcelySearchForm(QWidget):
 
@@ -40,8 +40,7 @@ class ParcelySearchForm(QWidget):
         self.__stavebniModel = QAbstractItemModel
         self.__pozemkovaModel = QAbstractItemModel
 
-        self.connect(self.ui.typParcelyCombo, SIGNAL(
-            "currentIndexChanged(int)"), self.__setDruhModel)
+        self.ui.typParcelyCombo.currentIndexChanged.connect(self.__setDruhModel)
         self.rx = QRegExp("[0-9]*/?[0-9]*")
         self.validator = QRegExpValidator(self.rx)
         self.ui.parCisloLineEdit.setValidator(self.validator)

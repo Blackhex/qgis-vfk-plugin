@@ -21,10 +21,11 @@
  ***************************************************************************/
 """
 
-from PyQt4.QtCore import QObject, QUrl, QRegExp, QModelIndex, SIGNAL, SLOT, Qt, pyqtSignal, qDebug
-from PyQt4.QtGui import QStandardItemModel, QStackedWidget, QStandardItem, QApplication
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
-from vfkTableModel import *
+from .vfkTableModel import *
 
 
 class SearchFormController(QObject):
@@ -74,12 +75,8 @@ class SearchFormController(QObject):
         self.__controls.formCombobox.addItem(u"budovy", self.Form.Budovy)
         self.__controls.formCombobox.addItem(u"jednotky", self.Form.Jednotky)
 
-        self.connect(
-            self.__controls.formCombobox, SIGNAL(
-                "activated(int)"), self.__controls.searchForms,
-                     SLOT("setCurrentIndex(int)"))
-        self.connect(self.__controls.searchButton,
-                     SIGNAL("clicked()"), self.search)
+        self.__controls.formCombobox.activated.connect(self.__controls.searchForms.setCurrentIndex)
+        self.__controls.searchButton.clicked.connect(self.search)
 
         self.__controls.searchForms.setCurrentIndex(0)
         self.__controls.searchButton.setEnabled(False)
@@ -221,10 +218,10 @@ class SearchFormController(QObject):
 
         model.appendRow(items)
 
-        for i in xrange(oldModel.rowCount()):
+        for i in range(oldModel.rowCount()):
             items = []
 
-            for j in xrange(oldModel.columnCount()):
+            for j in range(oldModel.columnCount()):
                 index = QModelIndex(oldModel.index(i, j))
                 data = oldModel.data(index)
                 item = QStandardItem(data)

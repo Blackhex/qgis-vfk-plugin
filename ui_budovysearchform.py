@@ -7,62 +7,56 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 try:
-    _fromUtf8 = QtCore.QString.fromUtf8
-except AttributeError:
-    def _fromUtf8(s):
-        return s
-
-try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
+    _encoding = QApplication.UnicodeUTF8
 
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+        return QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig)
+        return QApplication.translate(context, text, disambig)
 
 
 class Ui_BudovySearchForm(object):
 
     def setupUi(self, BudovySearchForm):
-        BudovySearchForm.setObjectName(_fromUtf8("BudovySearchForm"))
+        BudovySearchForm.setObjectName("BudovySearchForm")
         BudovySearchForm.resize(248, 190)
-        self.gridLayout_2 = QtGui.QGridLayout(BudovySearchForm)
-        self.gridLayout_2.setObjectName(_fromUtf8("gridLayout_2"))
-        self.label = QtGui.QLabel(BudovySearchForm)
-        self.label.setObjectName(_fromUtf8("label"))
+        self.gridLayout_2 = QGridLayout(BudovySearchForm)
+        self.gridLayout_2.setObjectName("gridLayout_2")
+        self.label = QLabel(BudovySearchForm)
+        self.label.setObjectName("label")
         self.gridLayout_2.addWidget(self.label, 3, 0, 1, 1)
-        self.label_2 = QtGui.QLabel(BudovySearchForm)
-        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.label_2 = QLabel(BudovySearchForm)
+        self.label_2.setObjectName("label_2")
         self.gridLayout_2.addWidget(self.label_2, 1, 0, 1, 1)
-        self.label_3 = QtGui.QLabel(BudovySearchForm)
-        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.label_3 = QLabel(BudovySearchForm)
+        self.label_3.setObjectName("label_3")
         self.gridLayout_2.addWidget(self.label_3, 0, 0, 1, 1)
-        self.cisloDomovniLineEdit = QtGui.QLineEdit(BudovySearchForm)
-        self.cisloDomovniLineEdit.setObjectName(
-            _fromUtf8("cisloDomovniLineEdit"))
+        self.cisloDomovniLineEdit = QLineEdit(BudovySearchForm)
+        self.cisloDomovniLineEdit.setObjectName("cisloDomovniLineEdit")
         self.gridLayout_2.addWidget(self.cisloDomovniLineEdit, 0, 1, 1, 1)
-        self.naParceleLineEdit = QtGui.QLineEdit(BudovySearchForm)
-        self.naParceleLineEdit.setObjectName(_fromUtf8("naParceleLineEdit"))
+        self.naParceleLineEdit = QLineEdit(BudovySearchForm)
+        self.naParceleLineEdit.setObjectName("naParceleLineEdit")
         self.gridLayout_2.addWidget(self.naParceleLineEdit, 1, 1, 1, 1)
-        self.label_4 = QtGui.QLabel(BudovySearchForm)
-        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.label_4 = QLabel(BudovySearchForm)
+        self.label_4.setObjectName("label_4")
         self.gridLayout_2.addWidget(self.label_4, 2, 0, 1, 1)
-        spacerItem = QtGui.QSpacerItem(
-            20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        spacerItem = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.gridLayout_2.addItem(spacerItem, 4, 0, 1, 1)
-        self.lvBudovyLineEdit = QtGui.QLineEdit(BudovySearchForm)
-        self.lvBudovyLineEdit.setObjectName(_fromUtf8("lvBudovyLineEdit"))
+        self.lvBudovyLineEdit = QLineEdit(BudovySearchForm)
+        self.lvBudovyLineEdit.setObjectName("lvBudovyLineEdit")
         self.gridLayout_2.addWidget(self.lvBudovyLineEdit, 3, 1, 1, 1)
-        self.mZpVyuzitiCombo = QtGui.QComboBox(BudovySearchForm)
-        self.mZpVyuzitiCombo.setObjectName(_fromUtf8("mZpVyuzitiCombo"))
+        self.mZpVyuzitiCombo = QComboBox(BudovySearchForm)
+        self.mZpVyuzitiCombo.setObjectName("mZpVyuzitiCombo")
         self.gridLayout_2.addWidget(self.mZpVyuzitiCombo, 2, 1, 1, 1)
 
         self.retranslateUi(BudovySearchForm)
-        QtCore.QMetaObject.connectSlotsByName(BudovySearchForm)
+        QMetaObject.connectSlotsByName(BudovySearchForm)
 
     def retranslateUi(self, BudovySearchForm):
         BudovySearchForm.setWindowTitle(

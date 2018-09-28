@@ -22,10 +22,11 @@
  ***************************************************************************/
 """
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import QAbstractItemModel, QModelIndex
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import QWidget
+from PyQt5.QtCore import QAbstractItemModel, QModelIndex
 
-from ui_jednotkysearchform import *
+from .ui_jednotkysearchform import *
 
 
 class JednotkySearchForm(QWidget):

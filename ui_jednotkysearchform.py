@@ -7,70 +7,62 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 try:
-    _fromUtf8 = QtCore.QString.fromUtf8
-except AttributeError:
-    def _fromUtf8(s):
-        return s
-
-try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
+    _encoding = QApplication.UnicodeUTF8
 
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+        return QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig)
+        return QApplication.translate(context, text, disambig)
 
 
 class Ui_JednotkySearchForm(object):
 
     def setupUi(self, JednotkySearchForm):
-        JednotkySearchForm.setObjectName(_fromUtf8("JednotkySearchForm"))
+        JednotkySearchForm.setObjectName("JednotkySearchForm")
         JednotkySearchForm.resize(248, 181)
-        self.gridLayout = QtGui.QGridLayout(JednotkySearchForm)
-        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
-        self.label = QtGui.QLabel(JednotkySearchForm)
-        self.label.setObjectName(_fromUtf8("label"))
+        self.gridLayout = QGridLayout(JednotkySearchForm)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label = QLabel(JednotkySearchForm)
+        self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 0, 0, 1, 1)
-        self.label_2 = QtGui.QLabel(JednotkySearchForm)
-        self.label_2.setObjectName(_fromUtf8("label_2"))
+        self.label_2 = QLabel(JednotkySearchForm)
+        self.label_2.setObjectName("label_2")
         self.gridLayout.addWidget(self.label_2, 1, 0, 1, 1)
-        self.label_3 = QtGui.QLabel(JednotkySearchForm)
-        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.label_3 = QLabel(JednotkySearchForm)
+        self.label_3.setObjectName("label_3")
         self.gridLayout.addWidget(self.label_3, 2, 0, 1, 1)
-        self.label_4 = QtGui.QLabel(JednotkySearchForm)
-        self.label_4.setObjectName(_fromUtf8("label_4"))
+        self.label_4 = QLabel(JednotkySearchForm)
+        self.label_4.setObjectName("label_4")
         self.gridLayout.addWidget(self.label_4, 3, 0, 1, 1)
-        self.label_5 = QtGui.QLabel(JednotkySearchForm)
-        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.label_5 = QLabel(JednotkySearchForm)
+        self.label_5.setObjectName("label_5")
         self.gridLayout.addWidget(self.label_5, 4, 0, 1, 1)
-        self.mCisloJednotkyLineEdit = QtGui.QLineEdit(JednotkySearchForm)
-        self.mCisloJednotkyLineEdit.setObjectName(
-            _fromUtf8("mCisloJednotkyLineEdit"))
+        self.mCisloJednotkyLineEdit = QLineEdit(JednotkySearchForm)
+        self.mCisloJednotkyLineEdit.setObjectName("mCisloJednotkyLineEdit")
         self.gridLayout.addWidget(self.mCisloJednotkyLineEdit, 0, 1, 1, 1)
-        self.mCisloDomovniLineEdit = QtGui.QLineEdit(JednotkySearchForm)
-        self.mCisloDomovniLineEdit.setObjectName(
-            _fromUtf8("mCisloDomovniLineEdit"))
+        self.mCisloDomovniLineEdit = QLineEdit(JednotkySearchForm)
+        self.mCisloDomovniLineEdit.setObjectName("mCisloDomovniLineEdit")
         self.gridLayout.addWidget(self.mCisloDomovniLineEdit, 1, 1, 1, 1)
-        self.mNaParceleLineEdit = QtGui.QLineEdit(JednotkySearchForm)
-        self.mNaParceleLineEdit.setObjectName(_fromUtf8("mNaParceleLineEdit"))
+        self.mNaParceleLineEdit = QLineEdit(JednotkySearchForm)
+        self.mNaParceleLineEdit.setObjectName("mNaParceleLineEdit")
         self.gridLayout.addWidget(self.mNaParceleLineEdit, 2, 1, 1, 1)
-        self.mLvJednotkyLineEdit = QtGui.QLineEdit(JednotkySearchForm)
-        self.mLvJednotkyLineEdit.setObjectName(
-            _fromUtf8("mLvJednotkyLineEdit"))
+        self.mLvJednotkyLineEdit = QLineEdit(JednotkySearchForm)
+        self.mLvJednotkyLineEdit.setObjectName("mLvJednotkyLineEdit")
         self.gridLayout.addWidget(self.mLvJednotkyLineEdit, 4, 1, 1, 1)
-        self.mZpVyuzitiCombo = QtGui.QComboBox(JednotkySearchForm)
-        self.mZpVyuzitiCombo.setObjectName(_fromUtf8("mZpVyuzitiCombo"))
+        self.mZpVyuzitiCombo = QComboBox(JednotkySearchForm)
+        self.mZpVyuzitiCombo.setObjectName("mZpVyuzitiCombo")
         self.gridLayout.addWidget(self.mZpVyuzitiCombo, 3, 1, 1, 1)
-        spacerItem = QtGui.QSpacerItem(
-            20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        spacerItem = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.gridLayout.addItem(spacerItem, 5, 1, 1, 1)
 
         self.retranslateUi(JednotkySearchForm)
-        QtCore.QMetaObject.connectSlotsByName(JednotkySearchForm)
+        QMetaObject.connectSlotsByName(JednotkySearchForm)
 
     def retranslateUi(self, JednotkySearchForm):
         JednotkySearchForm.setWindowTitle(

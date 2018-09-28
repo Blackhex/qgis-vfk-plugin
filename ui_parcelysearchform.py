@@ -7,93 +7,77 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-from PyQt4 import QtCore, QtGui
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
 try:
-    _fromUtf8 = QtCore.QString.fromUtf8
-except AttributeError:
-    def _fromUtf8(s):
-        return s
-
-try:
-    _encoding = QtGui.QApplication.UnicodeUTF8
+    _encoding = QApplication.UnicodeUTF8
 
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig, _encoding)
+        return QApplication.translate(context, text, disambig, _encoding)
 except AttributeError:
     def _translate(context, text, disambig):
-        return QtGui.QApplication.translate(context, text, disambig)
+        return QApplication.translate(context, text, disambig)
 
 
 class Ui_ParcelySearchForm(object):
 
     def setupUi(self, ParcelySearchForm):
-        ParcelySearchForm.setObjectName(_fromUtf8("ParcelySearchForm"))
+        ParcelySearchForm.setObjectName("ParcelySearchForm")
         ParcelySearchForm.resize(269, 168)
-        self.gridLayout = QtGui.QGridLayout(ParcelySearchForm)
-        self.gridLayout.setObjectName(_fromUtf8("gridLayout"))
-        self.label_3 = QtGui.QLabel(ParcelySearchForm)
-        self.label_3.setObjectName(_fromUtf8("label_3"))
+        self.gridLayout = QGridLayout(ParcelySearchForm)
+        self.gridLayout.setObjectName("gridLayout")
+        self.label_3 = QLabel(ParcelySearchForm)
+        self.label_3.setObjectName("label_3")
         self.gridLayout.addWidget(self.label_3, 0, 0, 1, 1)
-        self.parCisloLineEdit = QtGui.QLineEdit(ParcelySearchForm)
-        self.parCisloLineEdit.setInputMask(_fromUtf8(""))
-        self.parCisloLineEdit.setObjectName(_fromUtf8("parCisloLineEdit"))
+        self.parCisloLineEdit = QLineEdit(ParcelySearchForm)
+        self.parCisloLineEdit.setInputMask("")
+        self.parCisloLineEdit.setObjectName("parCisloLineEdit")
         self.gridLayout.addWidget(self.parCisloLineEdit, 0, 1, 1, 1)
-        self.label_5 = QtGui.QLabel(ParcelySearchForm)
-        self.label_5.setObjectName(_fromUtf8("label_5"))
+        self.label_5 = QLabel(ParcelySearchForm)
+        self.label_5.setObjectName("label_5")
         self.gridLayout.addWidget(self.label_5, 1, 0, 1, 1)
-        self.typParcelyCombo = QtGui.QComboBox(ParcelySearchForm)
-        sizePolicy = QtGui.QSizePolicy(
-            QtGui.QSizePolicy.Expanding, QtGui.QSizePolicy.Fixed)
+        self.typParcelyCombo = QComboBox(ParcelySearchForm)
+        sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.typParcelyCombo.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(self.typParcelyCombo.sizePolicy().hasHeightForWidth())
         self.typParcelyCombo.setSizePolicy(sizePolicy)
-        self.typParcelyCombo.setObjectName(_fromUtf8("typParcelyCombo"))
-        self.typParcelyCombo.addItem(_fromUtf8(""))
-        self.typParcelyCombo.addItem(_fromUtf8(""))
-        self.typParcelyCombo.addItem(_fromUtf8(""))
+        self.typParcelyCombo.setObjectName("typParcelyCombo")
+        self.typParcelyCombo.addItem("")
+        self.typParcelyCombo.addItem("")
+        self.typParcelyCombo.addItem("")
         self.gridLayout.addWidget(self.typParcelyCombo, 1, 1, 1, 1)
-        self.label_6 = QtGui.QLabel(ParcelySearchForm)
-        self.label_6.setObjectName(_fromUtf8("label_6"))
+        self.label_6 = QLabel(ParcelySearchForm)
+        self.label_6.setObjectName("label_6")
         self.gridLayout.addWidget(self.label_6, 2, 0, 1, 1)
-        self.druhPozemkuCombo = QtGui.QComboBox(ParcelySearchForm)
-        sizePolicy = QtGui.QSizePolicy(
-            QtGui.QSizePolicy.Ignored, QtGui.QSizePolicy.Fixed)
+        self.druhPozemkuCombo = QComboBox(ParcelySearchForm)
+        sizePolicy = QSizePolicy(QSizePolicy.Ignored, QSizePolicy.Fixed)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
-        sizePolicy.setHeightForWidth(
-            self.druhPozemkuCombo.sizePolicy().hasHeightForWidth())
+        sizePolicy.setHeightForWidth(self.druhPozemkuCombo.sizePolicy().hasHeightForWidth())
         self.druhPozemkuCombo.setSizePolicy(sizePolicy)
-        self.druhPozemkuCombo.setObjectName(_fromUtf8("druhPozemkuCombo"))
+        self.druhPozemkuCombo.setObjectName("druhPozemkuCombo")
         self.gridLayout.addWidget(self.druhPozemkuCombo, 2, 1, 1, 1)
-        spacerItem = QtGui.QSpacerItem(
-            20, 40, QtGui.QSizePolicy.Minimum, QtGui.QSizePolicy.Expanding)
+        spacerItem = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
         self.gridLayout.addItem(spacerItem, 4, 1, 1, 1)
-        self.lvParcelyLineEdit = QtGui.QLineEdit(ParcelySearchForm)
-        self.lvParcelyLineEdit.setObjectName(_fromUtf8("lvParcelyLineEdit"))
+        self.lvParcelyLineEdit = QLineEdit(ParcelySearchForm)
+        self.lvParcelyLineEdit.setObjectName("lvParcelyLineEdit")
         self.gridLayout.addWidget(self.lvParcelyLineEdit, 3, 1, 1, 1)
-        self.label = QtGui.QLabel(ParcelySearchForm)
-        self.label.setObjectName(_fromUtf8("label"))
+        self.label = QLabel(ParcelySearchForm)
+        self.label.setObjectName("label")
         self.gridLayout.addWidget(self.label, 3, 0, 1, 1)
 
         self.retranslateUi(ParcelySearchForm)
-        QtCore.QMetaObject.connectSlotsByName(ParcelySearchForm)
+        QMetaObject.connectSlotsByName(ParcelySearchForm)
 
     def retranslateUi(self, ParcelySearchForm):
-        ParcelySearchForm.setWindowTitle(
-            _translate("ParcelySearchForm", "Form", None))
-        self.label_3.setText(
-            _translate("ParcelySearchForm", "Parcelní číslo :", None))
-        self.label_5.setText(
-            _translate("ParcelySearchForm", "Typ parcely:", None))
-        self.typParcelyCombo.setItemText(
-            0, _translate("ParcelySearchForm", "libovolný", None))
-        self.typParcelyCombo.setItemText(
-            1, _translate("ParcelySearchForm", "pozemková", None))
-        self.typParcelyCombo.setItemText(
-            2, _translate("ParcelySearchForm", "stavební", None))
-        self.label_6.setText(
-            _translate("ParcelySearchForm", "Druh pozemku:", None))
+        ParcelySearchForm.setWindowTitle(_translate("ParcelySearchForm", "Form", None))
+        self.label_3.setText(_translate("ParcelySearchForm", "Parcelní číslo :", None))
+        self.label_5.setText(_translate("ParcelySearchForm", "Typ parcely:", None))
+        self.typParcelyCombo.setItemText(0, _translate("ParcelySearchForm", "libovolný", None))
+        self.typParcelyCombo.setItemText(1, _translate("ParcelySearchForm", "pozemková", None))
+        self.typParcelyCombo.setItemText(2, _translate("ParcelySearchForm", "stavební", None))
+        self.label_6.setText(_translate("ParcelySearchForm", "Druh pozemku:", None))
         self.label.setText(_translate("ParcelySearchForm", "LV:", None))

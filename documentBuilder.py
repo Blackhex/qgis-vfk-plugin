@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 
-from PyQt4.QtCore import QObject
+from PyQt5.QtCore import QObject
 
 from qgis.utils import iface
 
-from vfkDocument import *
-from vfkTableModel import *
-from htmlDocument import *
-from domains import *
+from .vfkDocument import *
+from .vfkTableModel import *
+from .htmlDocument import *
+from .domains import *
 
 class Coordinates(object):
 

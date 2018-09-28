@@ -22,10 +22,11 @@
  ***************************************************************************/
 """
 
-from PyQt4.QtGui import *
-from PyQt4.QtCore import pyqtSignal, SIGNAL
+from PyQt5.QtCore import *
+from PyQt5.QtGui import *
+from PyQt5.QtWidgets import *
 
-from ui_vlastnicisearchform import *
+from .ui_vlastnicisearchform import *
 
 
 class VlastniciSearchForm(QWidget):
@@ -39,17 +40,11 @@ class VlastniciSearchForm(QWidget):
         self.ui = Ui_VlastniciSearchForm()
         self.ui.setupUi(self)
 
-        self.connect(self.ui.ofoCheckBox, SIGNAL(
-            "clicked()"), self.__vlastniciSetRcIcoEnabled)
-        self.connect(self.ui.opoCheckBox, SIGNAL(
-            "clicked()"), self.__vlastniciSetRcIcoEnabled)
-
-        self.connect(self.ui.ofoCheckBox, SIGNAL(
-            "clicked()"), self.__vlastniciSearchEnabled)
-        self.connect(self.ui.opoCheckBox, SIGNAL(
-            "clicked()"), self.__vlastniciSearchEnabled)
-        self.connect(self.ui.sjmCheckBox, SIGNAL(
-            "clicked()"), self.__vlastniciSearchEnabled)
+        self.ui.ofoCheckBox.clicked.connect(self.__vlastniciSetRcIcoEnabled)
+        self.ui.opoCheckBox.clicked.connect(self.__vlastniciSetRcIcoEnabled)
+        self.ui.ofoCheckBox.clicked.connect(self.__vlastniciSearchEnabled)
+        self.ui.opoCheckBox.clicked.connect(self.__vlastniciSearchEnabled)
+        self.ui.sjmCheckBox.clicked.connect(self.__vlastniciSearchEnabled)
 
     def jmeno(self):
         return unicode(self.ui.jmenoLineEdit.text().strip())
@@ -71,9 +66,9 @@ class VlastniciSearchForm(QWidget):
 
     def __vlastniciSearchEnabled(self):
         if self.ui.ofoCheckBox.isChecked() or self.ui.opoCheckBox.isChecked() or self.ui.sjmCheckBox.isChecked():
-            self.emit(SIGNAL("searchEnabled"), True)
+            self.searchEnabled.emit(True)
         else:
-            self.emit(SIGNAL("searchEnabled"), False)
+            self.searchEnabled.emit(False)
 
     def __vlastniciSetRcIcoEnabled(self):
         if self.ui.ofoCheckBox.isChecked() or self.ui.opoCheckBox.isChecked():
